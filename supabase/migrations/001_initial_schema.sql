@@ -6,6 +6,9 @@
 
 -- Enable UUID extension
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+-- Supabase installs some extensions in this schema, while local Postgres
+-- commonly installs them in public. Keep both available to later migrations.
+SET search_path = public, extensions;
 
 -- ============================================================
 -- PROFILES

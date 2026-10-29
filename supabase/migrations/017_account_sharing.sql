@@ -47,6 +47,8 @@
 -- ============================================================
 -- TYPES
 -- ============================================================
+SET search_path = public, extensions;
+
 DO $$
 BEGIN
   IF NOT EXISTS (SELECT 1 FROM pg_type WHERE typname = 'account_role_enum') THEN

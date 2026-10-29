@@ -17,6 +17,8 @@
 -- ============================================================
 
 -- 1. Outbound interactive payload -----------------------------
+SET search_path = public, extensions;
+
 ALTER TABLE messages
   ADD COLUMN IF NOT EXISTS interactive_payload JSONB;
 

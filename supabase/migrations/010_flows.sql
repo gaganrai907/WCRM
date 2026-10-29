@@ -51,6 +51,7 @@
 -- ============================================================
 -- 1. Messages table — widen content_type, add interactive_reply_id
 -- ============================================================
+SET search_path = public, extensions;
 
 -- Drop & re-add the CHECK constraint to add 'interactive' as an allowed
 -- value. Migration 001 named it `messages_content_type_check` (Postgres
